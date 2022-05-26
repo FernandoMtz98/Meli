@@ -29,7 +29,7 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
 ## Ejecución del script desde terminal
 
     python3 script.py
-<br>
+<br align="center">
 <div style="text-align:center">
     <img src="Media/imagen1.PNG" width="400" height="100" />
 </div>
@@ -38,7 +38,7 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
 
     Unicamente basta con dar click en el icono de "RUN", dependiendo del IDE este puede llamarse de diferente manera:
  
- <br>
+ <br align="center">
  <div style="text-align:center">
     <img src="Media/imagen2.PNG" width="400" height="200" />
  </div>
