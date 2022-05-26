@@ -40,7 +40,7 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
  
  <br>
  <div style="text-align:center">
-    <img src="Media/imagen2.PNG" width="400" height="100" />
+    <img src="Media/imagen2.PNG" width="400" height="200" />
  </div>
  </br>                                                    
                 
