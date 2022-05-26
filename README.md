@@ -26,117 +26,17 @@ Se espera tener una base de datos con la siguiente información almacenada:
 
 Se genero el script en el lenguaje de programacion python en su version 3.9, utilizando las siguientes librerias: "PANDAS", "jSON", "SMTPLib", "sqlalchemy" y "psycopg2". Para la creacion de la base de datos se utilizo el sistema de gestion de bases de datos "postgress", para hostear esta base de datos se genero una instancia en la plataforma heroku.
 
-## Compilación del contenedor
+## Ejecución del script desde terminal
 
-    docker build -t maguey_lite .
-
-## Ejecución del contenedor
+    python3 script.py
+    <div style="text-align:center"><img src="Media/imagen1.PNG" /></div>
+                                                                
+## Ejecución del script desde IDE
 
     docker run --name prueba_appsec maguey_lite SITIO
 
-</details>
-<br>
 
-# Jenkins
-<details open>
-<summary> Cerrar </summary>
-<br>
 
-## Descripción
-
-El contenedor de Jenkins lanza una instancia que corre por el puerto 443, este necesita la creación del usuario jenkins con privilegios de root para  ejecutar comandos de Docker sin necesidad de contraseña:
-
-    run - Ejecutar el contendor Maguey
-    cp - Copiar archivos de contenedores
-    container - Realiza alguna accion especifica con los contenedores, en este caso eliminarlos
-
-Por temas de seguridad se restringirá el uso a las siguientes combinaciones de comandos:
-
-    docker run --name prueba_appsec_* maguey_lite * - Realizar el escaneo automatico
-    docker cp prueba_appsec_*:/resultados/ * - Copiar los resultados del escaneo
-    docker container prune -f * - Eliminar el contedor usado
-
-Dentro del directorio [Jenkins](Jenkins) existe el archivo Dockerfile para la compilación del contenedor y el archivo jenkins.sh para la creación del contenedor debido a la complejitud del comando.
-
-## Instalación en la nube
-
-Para lograr poder hacer una correcta integración con JIRA es necesario tener un certificado creado por una CA autorizada y por lo tanto un nombre de dominio.
-
-- El nombre de dominio se puede obtener de forma gratuita con [FreeNom](http://www.freenom.world/es/index.html?lang=es).
-- Y el certificado con [Let's Encrypt](https://letsencrypt.org/es/)
-
-Una vez asociado el nombre de dominio con la dirección IP (Azure, AWS, Google, etc) será necesario instalar el bot CertBot para la validación del sitio y creación de los certificados SSL/TLS
-
-```bash
-# Instalación de CertBot con SNAP
-snap install --classic certbot
-
-# Enlace para la ejecución de comandos directamente
-ln -s /snap/bin/certbot /usr/bin/certbot
-
-# Creación de los certificados
-certbot certonly --standalone --preferred-challenges http -d [DOMINIO]
-
-# Conversión de los certiciados a JKS keystore
-cd /etc/letsencrypt/live/www.secappjenkins.ml/
-openssl pkcs12 -inkey privkey.pem -in fullchain.pem -export -out keys.pkcs12
-keytool -importkeystore -srckeystore keys.pkcs12 -srcstoretype pkcs12 -destkeystore jenkins.jks
-mv jenkins.jks /home/usuarioJenkins/certs
-```
-
-De esta manera se tendrá un certificado válido.
-
-## Creación del contenedor
-
-    docker build -t jenkins_testing .
-
-## Ejecución del contenedor
-
-```bash
-docker run -u 0 -d --name jenkins-appsec \              # Ejecuta la instancia jenkins-appsec como un demonio
-    -v /home/usuarioJenkins/certs/:/var/jenkins_home \  # Todos los archivos creados de Jenkins se guardarán de forma local en la máquina local
-    -p 443:8443 \                                       # El puerto 8443 de Jenkins saldŕa por el puerto local 443
-    -v /var/run/docker.sock:/var/run/docker.sock \      # El socket de la conexión Docker de Jenkins saldrá por el socket local
-    -v $(which docker):/usr/bin/docker \                # Los comandos de Docker se ejecutarán de forma local
-    jenkins_testing \                                   # Nombre del contenedor a instanciar
-    --httpPort=-1 --httpsPort=8443 \                    # Configuración de los puertos 443
-    --httpsKeyStore=/var/jenkins_home/jenkins.jks \     # Ruta del certicado de Jenkins que se cambiará
-    --httpsKeyStorePassword=appsec                      # Contraseña del certficado
-```
-
-O mediante la ejecución del script jenkins.sh
-
-    ./jenkins.sh
-
-</details>
-<br>
-
-# JIRA
-<details open>
-<summary> Cerrar </summary>
-<br>
-
-## Descripción
-
-JIRA es un software de seguimiento de proyectos e incidencias enfocado en DevOps, sin embargo, existe la posibilidad de automatizar procesos mediante la integración con Jenkins a la vez de poder monitorear las actividades realizadas. 
-
-## Creación del proyecto
-
-Como la idea principal es automatizar procesos solo será necesario crear un proyecto general, en este caso la plantilla "Gestión de proyectos" funcionará.
-
-</details>
-<br>
-
-# Automatización
-<details open>
-<summary> Cerrar </summary>
-<br>
-
-## Descripción
-
-El proceso de automatizar consiste en las llamadas a la API de Jenkins y a la API de JIRA, las cuales ejecutarán los scripts de automatización y darán progreso a los demás procesos.
-
-<div style="text-align:center"><img src="Media/diagrama.svg" /></div>
 
 ## Triggers
 
