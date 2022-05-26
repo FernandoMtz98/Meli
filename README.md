@@ -31,7 +31,7 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
     python3 script.py
 <br>
 <div style="text-align:center">
-    <img src="Media/imagen1.PNG" width="400" height="500" />
+    <img src="Media/imagen1.PNG" width="200" height="300" />
 </div>
 </br>
 # Ejecución del script desde IDE
@@ -40,11 +40,11 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
  
  <br>
  <div style="text-align:center">
-    <img src="Media/imagen2.PNG" width="400" height="500" />
+    <img src="Media/imagen2.PNG" width="200" height="300" />
  </div>
  </br>                                                    
                 
 #REFERENCIAS                                                         
-* [HEROKU]([https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#about](https://dashboard.heroku.com/))
-* [POSTGRESS]([https://www.jenkins.io/doc/book/using/remote-access-api/](https://www.postgresql.org/))
+* [https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#about](https://dashboard.heroku.com/)
+* [https://www.jenkins.io/doc/book/using/remote-access-api/](https://www.postgresql.org/)
 * [https://www.python.org/](https://support.atlassian.com/jira-software-cloud/docs/smart-values-general/)
