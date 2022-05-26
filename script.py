@@ -18,7 +18,7 @@ def jsonFile():
     #Asignacion de los valores
     estructura = {'nombreDb':None,'emailOwner':None,'emailManager':None,'confidencialidad':None,'integridad':None,'disponibilidad':None, 'user_id':None} #Se crean los valores del diccionario
     dataFrame = pd.DataFrame(columns=columnas)
-    f=open('\dblist.json','r+') # Se abre el archivo json
+    f=open('./dblist.json','r+') # Se abre el archivo json
     x=json.load((f)) # Guardamos el contenido del json en X
 
     #Recorrido del json
@@ -31,7 +31,7 @@ def jsonFile():
         estructura['user_id'] = i ['owner']['uid']
         dataFrame = dataFrame.append(estructura,ignore_index=True)
 
-    dataExcel = pd.read_excel(io='\\user_manager.xlsx',names=['row_id','user_id','user_state','user_manager']) # leemos el excel y se asignan cabeceras a las columnas
+    dataExcel = pd.read_excel(io='./user_manager.xlsx',names=['row_id','user_id','user_state','user_manager']) # leemos el excel y se asignan cabeceras a las columnas
     #Se crea un nuevo dataframe donde se van a combinar las columnas del archivo cvs y json
     newData = dataFrame.join(dataExcel.set_index('user_id'),on='user_id')
     #eliminamos las columnas que no se necesitan
