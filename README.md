@@ -43,7 +43,17 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
     <img src="Media/imagen2.PNG" width="400" height="200" />
  </div>
  </br>                                                    
-                
+
+## ¡¡NOTA!!
+                                                         
+   El script necesita de 4 variables de entorno, las cuales son necesarias para realizar la conexión a la base de datos, estas seran compartidas en un correo :):
+                                                         
+                                                            ● db_user
+                                                            ● db_password
+                                                            ● db_host
+                                                            ● db_name
+                                                         
+                                                         
 #REFERENCIAS                                                         
 * [https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#about](https://dashboard.heroku.com/)
 * [https://www.jenkins.io/doc/book/using/remote-access-api/](https://www.postgresql.org/)
