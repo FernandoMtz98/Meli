@@ -3,7 +3,7 @@
     <img src="https://www.python.org/static/img/python-logo@2x.png" alt="script" width="400" img src="https://brand.heroku.com/static/media/heroku-logotype-horizontal.81c49462.svg alt="heroku" width="400">
   </br>
   <br>
-    SCRIPT FERNANDO MARTÍNEZ SÁNCHEZ
+    SCRIPT FERNANDO MARTÍNEZ
   <br>
 </h1>
 
@@ -24,7 +24,7 @@ Se espera tener una base de datos con la siguiente información almacenada:
 
 ## Descripción
 
-Se genero el script en el lenguaje de programacion python en su version 3.9, utilizando las siguientes librerias: "PANDAS", "jSON", "SMTPLib", "sqlalchemy" y "psycopg2". Para la creacion de la base de datos se utilizo el sistema de gestion de bases de datos "postgress", para hostear esta base de datos se genero una instancia en la plataforma heroku.
+Se genero el script en el lenguaje de programacion python en su version 3.9, utilizando las siguientes librerias: "PANDAS", "jSON", "SMTPLib", "sqlalchemy", "OS" y "psycopg2". Para la creacion de la base de datos se utilizo el sistema de gestion de bases de datos "postgress", para hostear esta base de datos se genero una instancia en la plataforma heroku.
 
 ## Ejecución del script desde terminal
 
@@ -46,14 +46,13 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
 
 ## ¡¡NOTA!!
                                                          
-   El script necesita de 4 variables de entorno, las cuales son necesarias para realizar la conexión a la base de datos, estas seran compartidas en un correo :):
+   El script necesita de 4 variables de entorno para funcionar, estas son necesarias para realizar la conexión a la base de datos, seran compartidas en un correo :)
                                                          
                                                             ● db_user
                                                             ● db_password
                                                             ● db_host
                                                             ● db_name
-                                                         
-                                                         
+                                                                                                            
 #REFERENCIAS                                                         
 * [https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#about](https://dashboard.heroku.com/)
 * [https://www.jenkins.io/doc/book/using/remote-access-api/](https://www.postgresql.org/)
