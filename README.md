@@ -29,7 +29,10 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
 ## Ejecución del script desde terminal
 
     python3 script.py
-    <div style="text-align:center"><img src="Media/imagen1.PNG" /></div>
+    <div style="text-align:center">
+    <img src="Media/imagen1.PNG" width="900" height="500" />
+    </div>
+
                                                                 
 ## Ejecución del script desde IDE
 
@@ -79,9 +82,6 @@ Por lo tanto se necesita de un trigger que se active cuando se agregue un coment
 Resultado:
 <br>
 <br>
-<div style="text-align:center">
-    <img src="Media/automatizacion_4.gif" width="900" height="500" />
-</div>
 
 
 ## Consultas a API / Conectar Jira con Jenkins 
