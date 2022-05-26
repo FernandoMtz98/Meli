@@ -1,9 +1,9 @@
 <h1 align="center">
   <br>
-    <img src="https://www.python.org/static/img/python-logo@2x.png" alt="SCRIPT FERNANDO MARTÍNEZ SÁNCHEZ" width="400">
+    <img src="https://www.python.org/static/img/python-logo@2x.png" alt="script" width="400" img src="https://brand.heroku.com/static/media/heroku-logotype-horizontal.81c49462.svg alt="heroku" width="400">
   </br>
   <br>
-    JJAutomatizer
+    SCRIPT FERNANDO MARTÍNEZ SÁNCHEZ
   <br>
 </h1>
 
