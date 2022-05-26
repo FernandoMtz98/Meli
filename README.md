@@ -31,7 +31,7 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
     python3 script.py
 <br>
 <div style="text-align:center">
-    <img src="Media/imagen1.PNG" width="200" height="300" />
+    <img src="Media/imagen1.PNG" width="100" height="100" />
 </div>
 </br>
 # Ejecución del script desde IDE
@@ -40,7 +40,7 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
  
  <br>
  <div style="text-align:center">
-    <img src="Media/imagen2.PNG" width="200" height="300" />
+    <img src="Media/imagen2.PNG" width="100" height="100" />
  </div>
  </br>                                                    
                 
