@@ -48,10 +48,10 @@ Se genero el script en el lenguaje de programacion python en su version 3.9, uti
                                                          
    El script necesita de 4 variables de entorno para funcionar, estas son necesarias para realizar la conexión a la base de datos, seran compartidas en un correo :)
                                                          
-                                                            ● db_user
-                                                            ● db_password
-                                                            ● db_host
-                                                            ● db_name
+                                                   ● db_user
+                                                   ● db_password
+                                                   ● db_host
+                                                   ● db_name
                                                                                                             
 #REFERENCIAS                                                         
 * [https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#about](https://dashboard.heroku.com/)
